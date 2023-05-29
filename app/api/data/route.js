@@ -16,3 +16,13 @@ export const fetchPhotos = async (query, page, order) => {
       throw error;
     }
   };
+
+export const fetchPhoto = async (photoId) => {
+  try {
+    const response = await api.get(`/photos/${photoId}?client_id=v-Lh3JXBoz01lm9Zq-N8kIvGe1Mslr7Y7FpLbZoFUIc`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};

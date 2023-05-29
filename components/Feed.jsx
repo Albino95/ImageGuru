@@ -16,22 +16,26 @@ const Feed = () => {
   const [order, setOrder] = useState('');
   const [page, setPage] = useState(1);
 
+  //State Change for Feed Actions
   const handleSearchChange = (e) => {
     setQuery(e.target.value);
   };
   const handleOrderChange = (e) => {
     setOrder(e.target.value);
   };
-  const scrollToTop = () => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-  };
+
   const handlePageChange = (selectedPage) => {
     scrollToTop();
     setPage(selectedPage);
   };
 
+  const scrollToTop = () => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
+  // Call for Populating the Feed
   const handleFetchPhotos = async () => {
     dispatch(fetchPhotosRequest(query,page, order));
     try {
