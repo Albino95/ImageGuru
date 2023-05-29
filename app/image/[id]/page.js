@@ -25,7 +25,7 @@ const ImageDetail = (inputData) => {
     };
     useEffect(() => {
         fetchData()
-    }, [inputData]);
+    }, [inputData.params.id]);
 
     if (!image) {
         return <LoadingSpinner />

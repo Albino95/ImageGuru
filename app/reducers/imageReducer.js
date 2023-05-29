@@ -2,6 +2,9 @@ import {
   FETCH_PHOTOS_REQUEST,
   FETCH_PHOTOS_SUCCESS,
   FETCH_PHOTOS_FAILURE,
+  FETCH_PHOTO_REQUEST,
+  FETCH_PHOTO_SUCCESS,
+  FETCH_PHOTO_FAILURE,
 } from '../actions/imageActions';
 
 const initialState = {
